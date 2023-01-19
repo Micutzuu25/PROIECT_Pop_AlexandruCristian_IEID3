@@ -1,0 +1,36 @@
+﻿@model Proiect.Models.Material
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Material</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nume)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nume)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Materie_Prima)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Materie_Prima)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cusatura)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cusatura)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
